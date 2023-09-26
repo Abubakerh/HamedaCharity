@@ -1,0 +1,12 @@
+$font-size-start: 12;
+$font-size-increment: 2;
+$line-height-start: 22;
+$line-height-increment: 2;
+
+@for $i from 12 through 102 step 2 {
+  .f-#{$i} {
+    font-size: #{$i}px;
+    line-height: #{$line-height-start}px;
+  }
+  $line-height-start: $line-height-start + $line-height-increment;
+}
